@@ -10,10 +10,11 @@ public class classes
 
     for(Shape s: shapes){ 
         System.out.println("Area is "+s.area());
+        s.printDetails();
     }
     }
 }
-class Circle extends Shape implements Printable{
+class Circle extends Shape{
     double r;
 
     public Circle(double r){ this.r = r;
@@ -32,7 +33,7 @@ class Circle extends Shape implements Printable{
     } 
 
 }
-class Triangle extends Shape implements Printable{
+class Triangle extends Shape{
     double b;
     double h;
     public Triangle(double b, double h) {
@@ -51,7 +52,7 @@ class Triangle extends Shape implements Printable{
 
     } 
 
-}class Rectangle extends Shape implements Printable{
+}class Rectangle extends Shape{
     double l;
     double b;
     public Rectangle(double l, double b){
