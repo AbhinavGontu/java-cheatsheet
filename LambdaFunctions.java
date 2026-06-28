@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.function.Consumer;
 
 public class LambdaFunctions{
     public static void main(String[] args) {
@@ -19,6 +20,15 @@ public class LambdaFunctions{
         .map(String::toUpperCase)
         .sorted()
         .forEach(System.out::println);
+    
+    Consumer<String> printer = name -> System.out.println(name);
+
+    names.stream()
+        .filter(name -> name.length()>3)
+        .map(String::toUpperCase)
+        .sorted()
+        .forEach(printer);
+
 
 
 
